@@ -28,12 +28,19 @@ const LandingPage = () => {
     setCursorPos({ x: touch.clientX, y: touch.clientY });
   };
 
+  const handleClick = () => {
+    // Add the URL you want to redirect to here
+    const redirectUrl = "https://thespot.art/satsgallery";
+    window.location.href = redirectUrl;
+  };
+
   return (
     <div
       className="landing-page"
       onMouseMove={handleMouseMove}
       onTouchMove={handleTouchMove}
       onTouchStart={handleTouchMove}
+      onClick={handleClick}
     >
       {circles.map((circle) => {
         const distanceX = cursorPos.x - circle.x;
