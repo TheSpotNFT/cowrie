@@ -23,8 +23,18 @@ const LandingPage = () => {
     setCursorPos({ x: e.clientX, y: e.clientY });
   };
 
+  const handleTouchMove = (e) => {
+    const touch = e.touches[0];
+    setCursorPos({ x: touch.clientX, y: touch.clientY });
+  };
+
   return (
-    <div className="landing-page" onMouseMove={handleMouseMove}>
+    <div
+      className="landing-page"
+      onMouseMove={handleMouseMove}
+      onTouchMove={handleTouchMove}
+      onTouchStart={handleTouchMove}
+    >
       {circles.map((circle) => {
         const distanceX = cursorPos.x - circle.x;
         const distanceY = cursorPos.y - circle.y;

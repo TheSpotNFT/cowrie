@@ -1,14 +1,22 @@
 /* src/LandingPage.css */
+html,
 body {
     margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
     overflow: hidden;
     font-family: 'Montserrat', sans-serif;
+    background-color: black;
 }
 
 .landing-page {
     height: 100vh;
     width: 100vw;
-    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: none;
     position: relative;
 }
 
