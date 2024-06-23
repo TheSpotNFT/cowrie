@@ -9,58 +9,15 @@ body {
     height: 100vh;
     width: 100vw;
     background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: none;
     position: relative;
 }
 
-.landing-page.green {
-    animation: propagate 2s forwards;
-}
-
-@keyframes propagate {
-    0% {
-        background-color: black;
-    }
-
-    100% {
-        background-color: green;
-    }
-}
-
-.soon-text {
-    color: lightgrey;
-    font-size: 5em;
-    opacity: 0;
-    transition: opacity 2s ease-in-out 2s;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.landing-page.green .soon-text {
-    opacity: 1;
-}
-
-.cursor {
+.circle {
     position: absolute;
     width: 80px;
     height: 80px;
     background-color: green;
     border-radius: 50%;
     pointer-events: none;
-    transform: translate(-50%, -50%);
-    transition: transform 0.05s;
-}
-
-.cursor-tracer {
-    position: absolute;
-    width: 80px;
-    height: 80px;
-    background-color: green;
-    border-radius: 50%;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    opacity: 0.6;
-    transition: transform 0.1s, opacity 0.1s;
+    transition: transform 0.2s;
 }
